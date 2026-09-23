@@ -180,6 +180,10 @@
   border-radius: 50%;
   background: #c9a9611a;
 }
+.property-viewing-copy,
+.property-viewing-action {
+  display: contents;
+}
 .property-viewing h2 {
   color: #fff;
   font-size: 20px;
@@ -215,6 +219,113 @@
   color: #6b7280;
   font-size: 12px;
   line-height: 16px;
+}
+@media (min-width: 900px) {
+  .property-collection {
+    gap: 0;
+    background:
+      radial-gradient(ellipse at 50% 100%, #00425044, transparent 56%),
+      linear-gradient(180deg, #031317 0%, #061a1f 100%);
+  }
+
+  .property-viewing {
+    position: relative;
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr) max-content;
+    grid-template-areas: 'icon copy action';
+    align-items: center;
+    justify-content: normal;
+    column-gap: clamp(28px, 4vw, 56px);
+    min-height: 0;
+    width: min(1040px, calc(100% - 96px));
+    margin: clamp(42px, 6vw, 72px) auto;
+    padding: clamp(30px, 4vw, 48px);
+    overflow: hidden;
+    border-color: #c9a96126;
+    background:
+      radial-gradient(circle at 12% 50%, #c9a9611c, transparent 26%),
+      linear-gradient(110deg, #0b1d22f5, #071316f2 58%, #101611f2);
+    box-shadow:
+      0 34px 90px #0008,
+      inset 0 1px 0 #ffffff0d;
+    text-align: left;
+  }
+
+  .property-viewing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg, transparent, #ffffff08 50%, transparent);
+    opacity: 0.45;
+  }
+
+  .property-viewing > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .property-viewing-copy,
+  .property-viewing-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .property-viewing-icon {
+    grid-area: icon;
+    width: 92px;
+    height: 92px;
+    margin: 0;
+    background: #c9a96120;
+    box-shadow: 0 0 0 1px #c9a9611f;
+  }
+
+  .property-viewing-copy {
+    grid-area: copy;
+    min-width: 0;
+  }
+
+  .property-viewing h2 {
+    margin: 0;
+    font-size: clamp(27px, 2.8vw, 38px);
+    line-height: 1.18;
+  }
+
+  .property-viewing h2 br,
+  .property-viewing p br {
+    display: none;
+  }
+
+  .property-viewing p {
+    max-width: 560px;
+    margin: 10px 0 0;
+    color: #aeb6ba;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .property-viewing-action {
+    grid-area: action;
+    align-items: flex-end;
+  }
+
+  .property-viewing-button {
+    justify-self: end;
+    width: auto;
+    min-width: 214px;
+    margin: 0;
+    padding: 14px 24px;
+    min-height: 56px;
+    font-size: 15px;
+    box-shadow: 0 14px 34px #0005;
+  }
+
+  .property-viewing small {
+    margin: 12px 0 0;
+    color: #788187;
+    font-size: 13px;
+  }
 }
 .figma-image {
   width: 100%;

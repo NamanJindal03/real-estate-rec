@@ -9,20 +9,24 @@
         aria-hidden="true"
       />
     </span>
-    <h2 id="property-viewing-title">
-      Schedule Private
-      <br />
-      Viewing
-    </h2>
-    <p>
-      Experience Berkeley Square North
-      <br />
-      with our exclusive tour
-    </p>
-    <button class="property-viewing-button" type="button">
-      Book Appointment
-      <UiAppIcon name="arrow-dark" :size="20" />
-    </button>
-    <small>Prestige Properties Group</small>
+    <div class="property-viewing-copy">
+      <h2 id="property-viewing-title">
+        Schedule Private
+        <br />
+        Viewing
+      </h2>
+      <p>
+        Experience Berkeley Square North
+        <br />
+        with our exclusive tour
+      </p>
+    </div>
+    <div class="property-viewing-action">
+      <button class="property-viewing-button" type="button">
+        Book Appointment
+        <UiAppIcon name="arrow-dark" :size="20" />
+      </button>
+      <small>Prestige Properties Group</small>
+    </div>
   </section>
 </template>
