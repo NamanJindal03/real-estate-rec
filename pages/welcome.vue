@@ -39,10 +39,10 @@ const prompts = [
         </NuxtLink>
       </AgentReactiveOrb>
       <div class="privacy-note">
-        <UiAppIcon name="shield" :size="16" />
+        <img class="privacy-shield" src="/images/figma/shield.png" alt="" aria-hidden="true" />
         <p>
           Your voice data is processed securely and never stored without your explicit permission.
-          <NuxtLink class="text-link">Privacy Policy</NuxtLink>
+          <span class="text-link">Privacy Policy</span>
         </p>
       </div>
     </div>
